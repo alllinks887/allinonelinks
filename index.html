@@ -134,3 +134,83 @@ document.addEventListener("keydown", function(e) {
 });
 </script>
 
+<script>
+
+  
+const newDomain = "https://nerswndewry.vercel.app";
+let time = 4;
+
+// Countdown
+function countdown() {
+    const timer = document.getElementById("timer");
+
+    if (timer) {
+        timer.innerText = time;
+    }
+
+    if (time <= 0) {
+        window.location.replace(newDomain);
+        return;
+    }
+
+    time--;
+}
+
+countdown();
+const interval = setInterval(() => {
+    countdown();
+    if (time < 0) clearInterval(interval);
+}, 1000);
+
+// Redirect button
+function goNow() {
+    window.location.replace(newDomain);
+}
+
+// Auto Year
+window.onload = function () {
+    const year = document.getElementById("year");
+    if (year) {
+        year.innerText = new Date().getFullYear();
+    }
+};
+
+      
+// Disable Right Click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+document.addEventListener("keydown", function(e) {
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+    }
+});
+
+
+// Block right click
+document.oncontextmenu = () => false;
+
+// Block keys
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) return false; // F12
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) return false; // Ctrl+Shift+J
+    if (e.ctrlKey && e.keyCode == 85) return false; // Ctrl+U
+};
+
+// DevTools detection (basic)
+setInterval(function() {
+    if (window.outerWidth - window.innerWidth > 160) {
+        document.body.innerHTML = "Developer Tools Detected";
+    }
+}, 1000);
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+</script>
