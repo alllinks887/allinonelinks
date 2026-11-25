@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nerswn | Coming Soon</title>
+
+<!-- Basic SEO -->
+
+<!-- Mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://nerswn.vercel.app">
+
+<!-- Open Graph (Facebook / WhatsApp) -->
+<meta property="og:url" content="https://nerswn.vercel.app">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Official Website">
+<meta name="twitter:description" content="Official website is live">
+<meta name="twitter:image" content="https://nerswn.vercel.app">
+
+<!-- Theme Color (Mobile Browser UI) -->
+<meta name="theme-color" content="#ffffff">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<meta name="description" content="Official Website is Live.">
+<meta name="keywords" content="developer, official website, portfolio">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://nerswn.vercel.app">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Nerswn">
+<meta property="og:description" content="Official Website is Live.">
+<meta property="og:url" content="https://nerswn.vercel.app">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+background:#0d0d0d;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+/* subtle animated gradient */
+body::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle at 20% 30%,#00ffd5,transparent),
+radial-gradient(circle at 80% 70%,#ff00cc,transparent);
+animation:move 12s infinite alternate;
+z-index:-1;
+filter:blur(120px);
+}
+
+@keyframes move{
+from{transform:translate(-10%, -10%)}
+to{transform:translate(10%, 10%)}
+}
+
+.container{
+text-align:center;
+max-width:500px;
+padding:40px;
+backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+h1{
+font-size:2.5em;
+margin-bottom:10px;
+}
+
+h2{
+font-size:1.2em;
+color:#000;
+margin-bottom:20px;
+font-weight:300;
+}
+
+p{
+font-size:14px;
+color:#000;
+margin-bottom:25px;
+}
+
+/* CTA button */
+.btn{
+display:inline-block;
+padding:12px 20px;
+background:#00ffd5;
+color:#000;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#00c2a5;
+}
+
+/* Social */
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:10px;
+font-size:22px;
+color:#fff;
+transition:.3s;
+}
+
+.social a:hover{
+color:#00ffd5;
+transform:scale(1.2);
+}
+
+footer{
+position:absolute;
+bottom:10px;
+font-size:12px;
+color:#fff;
+}
+</style>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Official Website is live",
+      "url": "https://nerswn.vercel.app"
+    },
+    {
+      "@type": "Person",
+      "name": "Nerswn",
+      "url": "https://nerswn.vercel.app",
+      "sameAs": [
+        "https://nerswn.org",
+        "https://instagram.com/nerswn",
+        "https://www.youtube.com/@nerswn",
+        "https://facebook.com/nerswn"
+      ]
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<main class="container">
+<h1></h1>
+<div class="p">
+Official Website Launching Soon.</p>
+
+<div class="p">
+ 
+New projects, portfolio, and updates will be available soon.
+</p>
+
+<!-- https://nerswn.vercel.app/favicon.ico -->
+<!-- https://nerswn.vercel.app/favicon.png -->
+<!-- https://nerswn.vercel.app/icon_48x48.png -->
+<!-- https://nerswn.vercel.app/icon_512x512.png -->
+
+<div class="social">
+<a href="https://instagram.com/nerswn_dewry_official"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/@nerswndewryofficial"><i class="fab fa-youtube"></i></a>
+<a href="https://facebook.com/nerswn.dewry.official"><i class="fab fa-facebook"></i></a>
+</div>
+</main>
+
+<footer>
+© <script>document.write(new Date().getFullYear())</script> Nerswn</footer>
+
+<script>
+
+  
+const newDomain = "https://nerswndewry.vercel.app";
+let time = 4;
+
+// Countdown
+function countdown() {
+    const timer = document.getElementById("timer");
+
+    if (timer) {
+        timer.innerText = time;
+    }
+
+    if (time <= 0) {
+        window.location.replace(newDomain);
+        return;
+    }
+
+    time--;
+}
+
+countdown();
+const interval = setInterval(() => {
+    countdown();
+    if (time < 0) clearInterval(interval);
+}, 1000);
+
+// Redirect button
+function goNow() {
+    window.location.replace(newDomain);
+}
+
+// Auto Year
+window.onload = function () {
+    const year = document.getElementById("year");
+    if (year) {
+        year.innerText = new Date().getFullYear();
+    }
+};
+
+      
+// Disable Right Click
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+document.addEventListener("keydown", function(e) {
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key === "u") {
+        e.preventDefault();
+    }
+});
+
+
+// Block right click
+document.oncontextmenu = () => false;
+
+// Block keys
+document.onkeydown = function(e) {
+    if (e.keyCode == 123) return false; // F12
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 73) return false; // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 74) return false; // Ctrl+Shift+J
+    if (e.ctrlKey && e.keyCode == 85) return false; // Ctrl+U
+};
+
+// DevTools detection (basic)
+setInterval(function() {
+    if (window.outerWidth - window.innerWidth > 160) {
+        document.body.innerHTML = "Developer Tools Detected";
+    }
+}, 1000);
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+</script>
+</body>
+</html>
+
